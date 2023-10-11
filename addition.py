@@ -1,4 +1,6 @@
 #fonction addition
 
 def addition (a,b):
-    return a + b
+    a = float(a)
+    b = float(b)
+    return float(a) + float(b)

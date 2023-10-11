@@ -25,14 +25,17 @@ while operation != "Q":
     operation = input("Quelle opération voulez-vous faire ?\n'+' => addition\n'-' => soustraction\n'*' => multiplication\n'/' => division\n'Q' => quitter\n\n")
 
     if operation == "+":
-        print("")
+        nombres = input_nombres()
+        affichage(operation, nombres[0], nombres[1], add(nombres[0], nombres[1]))
     elif operation == "-":
         nombres = input_nombres()
         affichage(operation, nombres[0], nombres[1], soustraction(nombres[0], nombres[1]))
     elif operation == "*":
-        print("")
+        nombres = input_nombres()
+        affichage(operation, nombres[0], nombres[1], multi(nombres[0], nombres[1]))
     elif operation == "/":
-        print("")
+        nombres = input_nombres()
+        affichage(operation, nombres[0], nombres[1], div(nombres[0], nombres[1]))
     elif operation == "Q":
         print("Bye bye !")
     else:
