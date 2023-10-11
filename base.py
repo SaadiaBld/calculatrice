@@ -2,6 +2,7 @@
 from soustraction import soustraction as soustraction
 # from multiplication import multiplication as multiplication
 # from division import division as division
+import cli_interface
 
 def input_nombres():
     num1 = input("Nombre 1 ?")
@@ -9,14 +10,15 @@ def input_nombres():
     return [num1, num2]
 
 def affichage(operateur, num1, num2, resultat) -> str:
-    print(f"{num1} {operateur} {num2} = {resultat}")
+    # print(f"{num1} {operateur} {num2} = {resultat}")
+    print(cli_interface.affichageCalulette(operateur, num1, num2, round(resultat,5)))
 
 operation = ""
 
 while operation != "Q":
     print("")
     
-    operation = input("Quel opération voulez-vous faire ?\n'+' => addition\n'-' => soustraction\n'*' => multiplication\n'/' => division\n'Q' => quitter\n\n")
+    operation = input("Quelle opération voulez-vous faire ?\n'+' => addition\n'-' => soustraction\n'*' => multiplication\n'/' => division\n'Q' => quitter\n\n")
 
     if operation == "+":
         print("")
